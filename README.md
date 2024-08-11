@@ -19,12 +19,12 @@ This Python script extracts text from specified URLs, processes it, and uses Ope
 - `beautifulsoup4`
 - `langchain_openai`
 - `langchain_community`
-- `fitz` (PyMuPDF)
+- `pymupdf` (PyMuPDF)
 
 You can install the required packages using pip:
 
 ```bash
-pip install requests beautifulsoup4 langchain_openai langchain_community fitz
+pip install requests beautifulsoup4 langchain_openai langchain_community pymupdf
 ```
 
 ## Add your OpenAI API key
