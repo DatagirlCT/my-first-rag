@@ -24,7 +24,7 @@ This Python script extracts text from specified URLs, processes it, and uses Ope
 You can install the required packages using pip:
 
 ```bash
-pip install requests beautifulsoup4 langchain_openai langchain_community pymupdf
+pip install requests beautifulsoup4 langchain_openai langchain_community pymupdf chromadb
 ```
 
 ## Add your OpenAI API key
