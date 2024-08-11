@@ -25,6 +25,7 @@ You can install the required packages using pip:
 
 ```bash
 pip install requests beautifulsoup4 langchain_openai langchain_community fitz
+```
 
 ## Add your OpenAI API key
 
@@ -34,5 +35,5 @@ You can add the api key to your environment variables:
 
 ```bash
 export OPENAI_API_KEY="your-api-key"
-
+```
 
