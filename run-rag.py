@@ -45,6 +45,15 @@ def main():
     # Ask a question that's related to the knowlege base you are providing?
     users_question = "What is this page about?"
 
+        # List of URLs
+    urls = [
+        "https://www.cmp.co.za/product/myhealth200",
+        "https://www.cmp.co.za/product/myhealth100saver",
+        "https://www.cmp.co.za/product/myhealth200saver"
+    ]
+
+    users_question = "Which plan is the best for a young family and why?"
+
     # make sure to add your api key to env
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
