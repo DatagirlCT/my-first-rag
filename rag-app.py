@@ -97,7 +97,7 @@ def generate_response(db, input_text):
 
     # ask the defined LLM
     logging.debug(f"about to call OpenAI")
-    model = OpenAI(temperature=1)
+    model = OpenAI(temperature=1,api_key=OPENAI_API_KEY))
 
     logging.debug(f"LLM Result")
     st.info(model.invoke(prompt_text))
