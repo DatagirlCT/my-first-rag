@@ -1,6 +1,7 @@
 __import__('pysqlite3')
 import sys
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 from streamlit import logger
 import sqlite3
 
@@ -53,7 +54,7 @@ logging.debug(f"urls to fetch - {len(urls)}")
 # Set OpenAI key from env
 # OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-openai_api_key = st.sidebar.text_input("OpenAI API Key", type="password")
+OPENAI_API_KEY = st.sidebar.text_input("OpenAI API Key", type="password")
 
 def generate_response(db, input_text):
     # use our vector store to find similar text chunks
@@ -133,7 +134,7 @@ def create_knowledgebase(urls):
 
     # define the embeddings model
     logging.debug(f"about to run embedding")
-    embeddings = OpenAIEmbeddings(api_key=openai_api_key)
+    embeddings = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
 
     # use the text chunks and the embeddings model to fill our vector store
     logging.debug(f"loading Chroma")
@@ -148,7 +149,7 @@ with st.form("my_form"):
         "What question would you like answered by the URL?"
     )
     submitted = st.form_submit_button("Ask AI")
-    if not openai_api_key.startswith("sk-"):
+    if not OPENAI_API_KEY.startswith("sk-"):
         st.warning("Please enter your OpenAI API key", icon="⚠")
-    if submitted and openai_api_key.startswith("sk-"):
+    if submitted and OPENAI_API_KEY.startswith("sk-"):
         generate_response(create_knowledgebase(urls), text)
