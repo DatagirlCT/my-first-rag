@@ -20,11 +20,12 @@ This Python script extracts text from specified URLs, processes it, and uses Ope
 - `langchain_openai`
 - `langchain_community`
 - `pymupdf` (PyMuPDF)
+- `chromadb`
 
 You can install the required packages using pip:
 
 ```bash
-pip install requests beautifulsoup4 langchain_openai langchain_community pymupdf chromadb
+pip install -r requirements.txt
 ```
 
 ## Add your OpenAI API key
