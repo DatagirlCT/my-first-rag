@@ -23,7 +23,7 @@ logging.basicConfig(level=logging.DEBUG,
 load_dotenv()
 
 app_logger = logger.get_logger('SMI_APP')
-app_logger,info(f"sqlite version: {sqlite3.sqlite_version}")
+app_logger.info(f"sqlite version: {sqlite3.sqlite_version}")
 app_logger.info(f"sys version:  {sys.version}")
 
 def extract_text_from_url(url):
