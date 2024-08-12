@@ -38,3 +38,8 @@ You can add the api key to your environment variables:
 export OPENAI_API_KEY="your-api-key"
 ```
 
+## If you want to access the streamlit app version locally
+
+```bash
+streamlit run rag-app.py
+```

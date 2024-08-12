@@ -35,23 +35,15 @@ def extract_text_from_pdf(pdf_path):
 
 def main():
     logging.debug("main - starting")
-    # List of URLs
-    urls = [
-        "https://www.url1",
-        "https://www.url2",
-        "https://www.url3"
-    ]
-    logging.debug(f"urls to fetch - {len(urls)}")
-    # Ask a question that's related to the knowlege base you are providing?
-    users_question = "What is this page about?"
-
-        # List of URLs
+    # List of URLs - update to your own list
     urls = [
         "https://www.cmp.co.za/product/myhealth200",
         "https://www.cmp.co.za/product/myhealth100saver",
         "https://www.cmp.co.za/product/myhealth200saver"
     ]
+    logging.debug(f"urls to fetch - {len(urls)}")
 
+    # Ask a question that's related to the knowlege base you are providing
     users_question = "Which plan is the best for a young family and why?"
 
     # make sure to add your api key to env
