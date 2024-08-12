@@ -1,3 +1,9 @@
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+from streamlit import logger
+import sqlite3
+
 import os
 import streamlit as st
 import requests
@@ -15,6 +21,10 @@ logging.basicConfig(level=logging.DEBUG,
                     datefmt='%Y-%m-%d %H:%M:%S')
 
 load_dotenv()
+
+app_logger = logger.get_logger('SMI_APP')
+app_logger,info(f"sqlite version: {sqlite3.sqlite_version}")
+app_logger.info(f"sys version:  {sys.version}")
 
 def extract_text_from_url(url):
   logging.debug("Extracting text from url %s", url)

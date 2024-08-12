@@ -117,6 +117,7 @@ smmap==5.0.1
 sniffio==1.3.1
 soupsieve==2.5
 SQLAlchemy==2.0.32
+pysqlite3-binary
 starlette==0.37.2
 streamlit==1.37.1
 sympy==1.13.1
