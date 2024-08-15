@@ -38,6 +38,12 @@ You can add the api key to your environment variables:
 export OPENAI_API_KEY="your-api-key"
 ```
 
+## Run the app with this link
+
+Remember to bring your OpenAI key
+
+https://my-first-rag.streamlit.app/
+
 ## If you want to access the streamlit app version locally
 
 ```bash
